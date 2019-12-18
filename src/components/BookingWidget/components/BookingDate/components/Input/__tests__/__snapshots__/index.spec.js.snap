@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input component should renders correctly 1`] = `
+<input
+  disabled={true}
+  onClick={[Function]}
+  placeholder="Some placeholder..."
+  value="2019/12/15"
+/>
+`;
+
+exports[`Input component should renders correctly with default props 1`] = `
+<input
+  disabled={true}
+  onClick={[Function]}
+  placeholder=""
+  value=""
+/>
+`;

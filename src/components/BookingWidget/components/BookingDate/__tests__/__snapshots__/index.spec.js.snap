@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Booking date component should renders correctly 1`] = `
+<div
+  className="booking-date__outer"
+>
+  <div
+    className="booking-date"
+  >
+    <p
+      className="booking-date__label"
+    >
+      Dates
+    </p>
+    <div
+      className="booking-date__wrapper"
+    >
+      <input
+        disabled={true}
+        onClick={[Function]}
+        placeholder="Check In"
+        value=""
+      />
+      <img
+        alt="Arrow"
+        className="booking-date__arrow"
+        src="../../../../assets/images/arrow-right.svg"
+      />
+      <input
+        disabled={true}
+        onClick={[Function]}
+        placeholder="Check Out"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
