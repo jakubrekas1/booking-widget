@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Booking price component should renders correctly 1`] = `
+<div
+  className="booking-price"
+>
+  <p
+    className="booking-price__value"
+  >
+    256 PLN 
+    <span
+      className="booking-price__label"
+    >
+      per night
+    </span>
+  </p>
+</div>
+`;
+
+exports[`Booking price component should renders correctly with default props 1`] = `
+<div
+  className="booking-price"
+>
+  <p
+    className="booking-price__value"
+  >
+    256 zł 
+    <span
+      className="booking-price__label"
+    >
+      per night
+    </span>
+  </p>
+</div>
+`;
