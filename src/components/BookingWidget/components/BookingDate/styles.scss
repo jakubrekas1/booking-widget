@@ -1,0 +1,31 @@
+@import '../../../../assets/styles/colors';
+
+.booking-date{
+  margin-bottom: 25px;
+
+  &__label{
+    margin-bottom: 6px;
+    color: $black;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid darken($white, 10%);
+    border-radius: 2px;
+  }
+
+  &__arrow{
+    width: 30px;
+    height: 30px;
+    padding: 0 30px 0 10px;
+    background-image: url('../../../../assets/images/arrow-right.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,34 @@
+@import '../../../../assets/styles/colors';
+
+.booking-rate{
+  display: flex;
+
+  &__star{
+    display: block;
+    align-items: center;
+    width: 8px;
+    height: 16px;
+    background-image: url('../../../../assets/images/star.svg');
+    background-repeat: no-repeat;
+    background-size: 16px;
+
+    &.fill{
+      background-image: url('../../../../assets/images/star-fill.svg');
+    }
+
+    &:nth-child(odd){
+      background-position: left center;
+    }
+
+    &:nth-child(even){
+      background-position: right center;
+    }
+  }
+
+  &__votes{
+    margin-left: 5px;
+    color: $black;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}

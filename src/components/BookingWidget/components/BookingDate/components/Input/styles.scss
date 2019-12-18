@@ -1,0 +1,21 @@
+@import '../../../../../../assets/styles/colors';
+
+.booking-date{
+  &__field{
+    width: 50%;
+    padding: 4px 8px;
+    font-size: 22px;
+    color: $black;
+    background-color: $white;
+    border-width: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 100ms all linear;
+
+    &:hover,
+    &.active{
+      background-color: $base--light;
+      color: $base--dark;
+    }
+  }
+}

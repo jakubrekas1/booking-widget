@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './styles.scss';
+
 const BookingPrice = ({ amount, currency }) => (
   <div className="booking-price">
     <p className="booking-price__value">

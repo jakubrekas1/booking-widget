@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import { Input } from './components/Input';
 
+import './styles.scss';
+
 const BookingDate = ({
   dateEnd,
   dateStart,
@@ -19,11 +21,7 @@ const BookingDate = ({
         <p className="booking-date__label">Dates</p>
         <div className="booking-date__wrapper">
           <Input onClick={onStartDateClick} placeholder="Check In" value={dateStart} />
-          <img
-            alt="Arrow"
-            className="booking-date__arrow"
-            src="../../../../assets/images/arrow-right.svg"
-          />
+          <i className="booking-date__arrow" />
           <Input onClick={onEndDateClick} placeholder="Check Out" value={dateEnd} />
         </div>
       </div>

@@ -1,0 +1,20 @@
+@import '../../assets/styles/colors';
+
+.booking-widget{
+  width: 100%;
+  max-width: 480px;
+  background-color: $white;
+  border: 1px solid darken($white, 10%);
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: left;
+
+  &__line{
+    margin: 25px 0;
+    border-bottom: 1px solid darken($white, 10%);
+  }
+
+  &__calendar-wrapper{
+    position: relative;
+  }
+}

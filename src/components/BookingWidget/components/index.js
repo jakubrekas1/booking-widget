@@ -1,3 +1,4 @@
-export { default as BookingButton } from './BookingButton';
-export { default as BookingPrice } from './BookingPrice';
-export { default as BookingRate } from './BookingRate';
+export { BookingButton } from './BookingButton';
+export { BookingDate } from './BookingDate';
+export { BookingPrice } from './BookingPrice';
+export { BookingRate } from './BookingRate';
