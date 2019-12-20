@@ -13,11 +13,12 @@ const BookingPrice = ({ amount, currency }) => (
 );
 
 BookingPrice.defaultProps = {
+  amount: 0,
   currency: 'zł',
 };
 
 BookingPrice.propTypes = {
-  amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   currency: PropTypes.string,
 };
 

@@ -28,13 +28,14 @@ const BookingWidget = ({
 );
 
 BookingWidget.defaultProps = {
+  amount: 0,
   currency: 'zł',
-  rate: 0,
+  rate: 4,
   votes: 0,
 };
 
 BookingWidget.propTypes = {
-  amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  amount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   currency: PropTypes.string,
   rate: PropTypes.number,
   votes: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
