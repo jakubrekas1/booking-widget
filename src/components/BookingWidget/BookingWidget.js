@@ -30,7 +30,7 @@ const BookingWidget = ({
 BookingWidget.defaultProps = {
   amount: 0,
   currency: 'zł',
-  rate: 4,
+  rate: 0,
   votes: 0,
 };
 

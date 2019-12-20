@@ -5,10 +5,10 @@ import { STARS_NUMBER } from '../../../../constants';
 import BookingRate from './BookingRate';
 
 const BookingRateContainer = ({ rate, votes }) => {
-  const formattedRate = useMemo(() => Math.round(rate) * 2, [rate]);
+  const formattedRate = useMemo(() => Math.fround(rate) * 2, [rate]);
 
   const stars = useMemo(() => [...Array(STARS_NUMBER * 2)].map((star, index) => {
-    const isFilled = index <= formattedRate ? 'booking-rate__star--fill' : '';
+    const isFilled = index < formattedRate ? 'booking-rate__star--fill' : '';
     return (
       <div
         className={`booking-rate__star ${isFilled}`}
