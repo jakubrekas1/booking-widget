@@ -16,20 +16,20 @@ exports[`Booking date component should renders correctly 1`] = `
       className="booking-date__wrapper"
     >
       <input
-        disabled={true}
+        className="booking-date__field"
         onClick={[Function]}
         placeholder="Check In"
+        readOnly={true}
         value=""
       />
-      <img
-        alt="Arrow"
+      <i
         className="booking-date__arrow"
-        src="../../../../assets/images/arrow-right.svg"
       />
       <input
-        disabled={true}
+        className="booking-date__field"
         onClick={[Function]}
         placeholder="Check Out"
+        readOnly={true}
         value=""
       />
     </div>

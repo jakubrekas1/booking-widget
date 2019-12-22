@@ -1,5 +1,9 @@
 @import '../../../../assets/styles/colors';
 
+button::-moz-focus-inner {
+  border: 0;
+}
+
 .booking-button{
   display: block;
   width: 100%;

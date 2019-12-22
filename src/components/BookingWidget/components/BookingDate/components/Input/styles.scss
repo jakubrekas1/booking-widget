@@ -1,8 +1,8 @@
 @import '../../../../../../assets/styles/colors';
 
-.booking-date{
-  &__field{
-    width: 50%;
+.booking-date {
+  &__field {
+    width: calc(50% - 40px);
     padding: 4px 8px;
     font-size: 22px;
     color: $black;
@@ -14,7 +14,7 @@
 
     &:hover,
     &:focus,
-    &.active{
+    &.active {
       background-color: $base--light;
       color: $base--dark;
       outline: none;

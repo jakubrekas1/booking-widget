@@ -3,6 +3,7 @@
 exports[`Booking button component should renders correctly 1`] = `
 <button
   className="booking-button"
+  disabled={false}
   onClick={[Function]}
   type="submit"
 >

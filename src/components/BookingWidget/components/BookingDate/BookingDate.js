@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import { Input } from './components/Input';
@@ -10,8 +10,8 @@ const BookingDate = ({
   dateStart,
   onClick,
 }) => {
-  const onEndDateClick = () => onClick(dateEnd);
-  const onStartDateClick = () => onClick(dateStart);
+  const onEndDateClick = useCallback(() => onClick(dateEnd), [dateEnd, onClick]);
+  const onStartDateClick = useCallback(() => onClick(dateStart), [dateStart, onClick]);
 
   return (
     <div className="booking-date__outer">

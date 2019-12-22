@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { formatDate } from '@codegraphy/react-daterange-picker/services';
 
@@ -14,10 +14,10 @@ const BookingWidgetContainer = ({
   const calendarRef = useRef();
   const [showCalendar, setShowCalendar] = useState(false);
 
-  const handleCalendarChange = (range) => {
+  const handleCalendarChange = useCallback((range) => {
     setDateStart(formatDate(range.dateStart));
     setDateEnd(formatDate(range.dateEnd));
-  };
+  }, [setDateEnd, setDateStart]);
 
   const handleSubmit = () => onSubmit({
     amount,

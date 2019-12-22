@@ -2,18 +2,20 @@
 
 exports[`Input component should renders correctly 1`] = `
 <input
-  disabled={true}
+  className="booking-date__field"
   onClick={[Function]}
   placeholder="Some placeholder..."
+  readOnly={true}
   value="2019/12/15"
 />
 `;
 
 exports[`Input component should renders correctly with default props 1`] = `
 <input
-  disabled={true}
+  className="booking-date__field"
   onClick={[Function]}
   placeholder=""
+  readOnly={true}
   value=""
 />
 `;
