@@ -1,35 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import BookingDate from './BookingDate';
 
-const BookingDateContainer = () => {
-  const [defaultCurrentDate, setDefaultCurrentDate] = useState(null);
-
-  const [dateStart, setDateStart] = useState('');
-  const [dateEnd, setDateEnd] = useState('');
-
-  const [showCalendar, setShowCalendar] = useState(false);
-
-  const handleCalendarChange = (range) => {
-    setDateStart(range.dateStart);
-    setDateEnd(range.dateEnd);
-  };
-
+const BookingDateContainer = ({
+  dateEnd, dateStart, setDefaultCurrentDate, setShowCalendar,
+}) => {
   const handleDateClick = (date) => {
     setDefaultCurrentDate(date);
-    setShowCalendar(true);
+    setShowCalendar((visible) => !visible);
   };
 
   return (
     <BookingDate
       dateEnd={dateEnd}
       dateStart={dateStart}
-      defaultCurrentDate={defaultCurrentDate}
-      onCalendarChange={handleCalendarChange}
       onClick={handleDateClick}
-      showCalendar={showCalendar}
     />
   );
+};
+
+BookingDateContainer.defaultProps = {
+  dateEnd: '',
+  dateStart: '',
+};
+
+BookingDateContainer.propTypes = {
+  dateEnd: PropTypes.string,
+  dateStart: PropTypes.string,
+  setDefaultCurrentDate: PropTypes.func.isRequired,
+  setShowCalendar: PropTypes.func.isRequired,
 };
 
 export default BookingDateContainer;

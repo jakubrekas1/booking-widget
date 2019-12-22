@@ -17,7 +17,7 @@ const BookingRateContainer = ({ rate, votes }) => {
         key={index}
       />
     );
-  }), [rate]);
+  }), [formattedRate]);
 
   return (
     <BookingRate stars={stars} votes={votes} />

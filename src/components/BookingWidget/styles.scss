@@ -1,7 +1,8 @@
 @import '../../assets/styles/colors';
 
-.booking-widget{
+.booking-widget {
   width: 100%;
+  min-width: 360px;
   max-width: 480px;
   background-color: $white;
   border: 1px solid darken($white, 10%);
@@ -9,12 +10,164 @@
   box-sizing: border-box;
   text-align: left;
 
-  &__line{
+  &__line {
     margin: 25px 0;
     border-bottom: 1px solid darken($white, 10%);
   }
 
-  &__calendar-wrapper{
+  &__calendar-wrapper {
     position: relative;
+  }
+
+  &__datepicker {
+    position: absolute;
+    top: 80px;
+    width: calc(100% - 22px);
+    padding: 10px 10px 15px;
+    border: 1px solid $border;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: $white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+
+    > p {
+      color: $black;
+      font-size: 13px;
+      margin: 0 0 5px;
+    }
+
+    .calendar {
+      margin-bottom: 20px;
+
+      &__header {
+        margin-bottom: 10px;
+      }
+
+      &__title {
+        align-self: center;
+        color: $black;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      &__btn {
+        width: 40px;
+        height: 30px;
+        border: 1px solid $border;
+        border-radius: 2px;
+        background-color: $white;
+        background-position: center;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0);
+
+        &--prev {
+          background-image: url('../../assets/images/arrow-left.svg');
+        }
+
+        &--next {
+          background-image: url('../../assets/images/arrow-right.svg');
+        }
+
+        &:hover,
+        &:focus {
+          background-color: darken($white, 5%);
+          outline: none;
+        }
+      }
+
+      &__day-weeks {
+        text-align: center;
+        color: $black;
+        font-size: 11px;
+        padding-bottom: 5px;
+      }
+
+      &__days {
+        border-width: 1px 0 0 1px;
+        border-color: $border;
+        border-style: solid;
+      }
+
+      &__day {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        font-size: 13px;
+        color: $black;
+        border-width: 0 1px 1px 0;
+        border-color: $border;
+        border-style: solid;
+        cursor: pointer;
+
+        &--is-today {
+          position: relative;
+
+          &:after {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 10px;
+            height: 10px;
+            content: '';
+            background-color: $base;
+            border-radius: 50%;
+          }
+
+          &:hover,
+          &.calendar__day--is-selected {
+            &:after {
+              background-color: $white;
+            }
+          }
+        }
+
+        &--is-other-month {
+          color: darken($white, 15%);
+          pointer-events: none;
+          cursor: default;
+        }
+
+        &--is-selected,
+        &:hover {
+          background-color: $base;
+          color: $white;
+        }
+
+        &--is-between {
+          background-color: lighten($base, 50%);
+        }
+
+        &--is-reserved {
+          color: darken($white, 15%);
+          pointer-events: none;
+          cursor: default;
+          text-decoration: line-through;
+        }
+      }
+
+      &__error {
+        margin-top: 11px;
+        color: $op;
+        font-size: 13px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .booking-widget {
+    &__datepicker {
+      .calendar{
+        &__day{
+          height: 35px;
+        }
+      }
+    }
   }
 }

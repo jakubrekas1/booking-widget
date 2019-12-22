@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 import './styles.scss';
 
-const BookingButton = ({ onClick }) => (
+const BookingButton = ({ disabled, onClick }) => (
   <button
     className="booking-button"
+    disabled={disabled}
     onClick={onClick}
     type="submit"
   >
@@ -13,7 +14,12 @@ const BookingButton = ({ onClick }) => (
   </button>
 );
 
+BookingButton.defaultProps = {
+  disabled: false,
+};
+
 BookingButton.propTypes = {
+  disabled: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
 };
 

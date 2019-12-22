@@ -1,16 +1,16 @@
 @import '../../../../assets/styles/colors';
 
-.booking-date{
+.booking-date {
   margin-bottom: 25px;
 
-  &__label{
+  &__label {
     margin-bottom: 6px;
     color: $black;
     font-size: 14px;
     font-weight: bold;
   }
 
-  &__wrapper{
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,7 +19,7 @@
     border-radius: 2px;
   }
 
-  &__arrow{
+  &__arrow {
     width: 30px;
     height: 30px;
     padding: 0 30px 0 10px;

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 
 const Input = ({ onClick, placeholder, value }) => (
-  <input className="booking-date__field" disabled onClick={onClick} placeholder={placeholder} value={value} />
+  <input className="booking-date__field" onClick={onClick} placeholder={placeholder} readOnly value={value} />
 );
 
 Input.defaultProps = {
